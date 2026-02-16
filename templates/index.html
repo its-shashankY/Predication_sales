@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Prediction</title>
+</head>
+<body>
+    <form  action="/predict" method="post" style="width:400px; border-radius: 40px; padding:20px;  position: absolute; left:50%; top:50%; transform: translate(-50%, -50%); box-shadow: 1px 1px 10px lightslategray;">
+      <h1  style="text-align: center;">Predict Sales of TV</h1>  
+      <fieldset style=" border-radius: 10px;">
+        <legend>TV</legend>
+        <input type="number"  name="TV" required style="border: none;outline: none;width:100%;height:30px;"/>
+      </fieldset>
+      <fieldset style=" border-radius: 10px;">
+        <legend>Radio</legend>
+        <input type="number"  name="Radio" required style="border: none;outline: none;width:100%;height:30px;margin-top: 10px;"/>
+      </fieldset>
+      <fieldset style=" border-radius: 10px;">
+        <legend>Newspaper</legend>
+        <input type="number"  name="Newspaper" required style="border: none;outline: none;width:100%;height:30px;"/>
+      </fieldset>
+      {% if prediction is not none %}
+        <h3>Predicted Sales: {{ prediction }}</h3>
+      {% endif %}
+      <button type="submit" style="border-radius: 10px; background-color: greenyellow; font-size: 30px;margin-top: 10px; margin-left: 30%;width:150px; height:70px;">Submit</button>
+    </form>
+</body>
+</html>
