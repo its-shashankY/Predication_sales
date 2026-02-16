@@ -1,3 +1,5 @@
 fastapi
 uvicorn
-pickle
+python-multipart
+scikit-learn
+jinja2
